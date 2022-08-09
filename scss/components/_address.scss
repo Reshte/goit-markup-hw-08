@@ -1,0 +1,41 @@
+.address__location,
+.address__mail,
+.address__phone {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(14 / 11);
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+
+  transition: color var(--anim-hover);
+}
+
+.address a {
+  display: block;
+  margin-bottom: 9px;
+}
+
+.address a:last-child {
+  margin-bottom: 0px;
+}
+
+.address__location {
+  color: var(--white-text-color);
+}
+
+.address__mail,
+.address__phone {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.address__location:focus,
+.address__mail:focus,
+.address__phone:focus,
+.address__location:hover,
+.address__mail:hover,
+.address__phone:hover {
+  color: var(--accent-text-color);
+}
