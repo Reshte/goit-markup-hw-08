@@ -374,8 +374,16 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/img@1x_sm.jpg");
   background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/img@1x_sm.jpg");
+}
+@media screen and (min-width: 1200px) {
+  .hero_overlay {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 @media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .hero_overlay {
@@ -405,17 +413,6 @@ img {
   .hero_overlay {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/img@2x_lg.jpg");
     background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/img@2x_lg.jpg");
-  }
-}
-
-.hero__container {
-  padding-top: 118px;
-  padding-bottom: 118px;
-}
-@media screen and (min-width: 1200px) {
-  .hero__container {
-    padding-top: 200px;
-    padding-bottom: 200px;
   }
 }
 
@@ -860,6 +857,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 @media screen and (min-width: 1200px) {
   .subcription {
@@ -876,7 +876,7 @@ img {
   border-radius: 4px;
   background-color: transparent;
   padding: 15px 16px;
-  margin-right: 12px;
+  margin-right: 0;
   outline: none;
   color: var(--white-text-color);
   -webkit-transition: border-color var(--anim-hover);
@@ -886,6 +886,7 @@ img {
 @media screen and (min-width: 1200px) {
   .subcription__input {
     margin-bottom: 0;
+    margin-right: 12px;
     width: 358px;
   }
 }

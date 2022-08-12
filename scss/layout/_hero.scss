@@ -9,6 +9,14 @@
   background-position: center;
   background-size: cover;
 
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
   // mobile screen
   background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url('../images/hero/img@1x_sm.jpg');
@@ -108,16 +116,6 @@
 //     }
 //   }
 // }
-
-.hero__container {
-  padding-top: 118px;
-  padding-bottom: 118px;
-
-  @media screen and (min-width: 1200px) {
-    padding-top: 200px;
-    padding-bottom: 200px;
-  }
-}
 
 .hero__title {
   font-weight: 900;
