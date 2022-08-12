@@ -40,6 +40,93 @@
               <a class="nav__link link" href="">Контакти</a>
             </li>
           </ul>
+
+          <button
+            class="menu_btn"
+            type="button"
+            aria-controls="menu-conteiner"
+            aria-expanded="false"
+            data-menu-button
+          >
+            <svg
+              class="menu_icon"
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use class="menu_icon--open" href="./images/icons.svg#menu"></use>
+              <use class="menu_icon--close" href="./images/icons.svg#close_menu_m"></use>
+            </svg>
+          </button>
+
+          <div class="menu-conteiner" data-menu id="menu-conteiner">
+            <ul class="menu__list list">
+              <li class="menu__item">
+                <a class="menu__link link" href="./index.html">Студія</a>
+              </li>
+
+              <li class="menu__item">
+                <a class="menu__link link" href="./portfolio.html">Портфоліо</a>
+              </li>
+
+              <li class="menu__item">
+                <a class="menu__link link" href="">Контакти</a>
+              </li>
+            </ul>
+
+            <ul class="menu-contacts list">
+              <li class="menu-contacts__item">
+                <a class="menu-contacts__phone link" href="tel:+380961111111">
+                  +38 096 111 11 11
+                </a>
+              </li>
+
+              <li class="menu-contacts__item">
+                <a class="menu-contacts__mail link" href="mailto:info@devstudio.com">
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+
+            <ul class="menu__socials-list list">
+              <li class="menu__socials-item">
+                <a
+                  href="https://www.instagram.com/"
+                  class="menu__socials-link link"
+                  rel="noopener noreferrer"
+                  aria-label="instagram"
+                  >Instagram
+                </a>
+              </li>
+              <li class="menu__socials-item">
+                <a
+                  href="https://twitter.com/"
+                  class="menu__socials-link link"
+                  rel="noopener noreferrer"
+                  aria-label="twitter"
+                  >Twitter
+                </a>
+              </li>
+              <li class="menu__socials-item">
+                <a
+                  href="https://uk-ua.facebook.com/"
+                  class="menu__socials-link link"
+                  rel="noopener noreferrer"
+                  aria-label="facebook"
+                  >Facebook
+                </a>
+              </li>
+              <li class="menu__socials-item">
+                <a
+                  href="https://www.linkedin.com/"
+                  class="menu__socials-link link"
+                  rel="noopener noreferrer"
+                  aria-label="linkedin"
+                  >Linkedin
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
 
         <ul class="header-contacts list">
