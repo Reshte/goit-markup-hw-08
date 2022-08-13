@@ -26,6 +26,16 @@
           <a class="logo header__logo link" href="./index.html"
             ><span class="logo__accent">Web</span>Studio</a
           >
+          <button class="menu-btn" type="button" data-menu-open>
+            <svg
+              class="menu_icon"
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use class="menu_icon--open" href="./images/icons.svg#menu"></use>
+            </svg>
+          </button>
 
           <ul class="nav__list list">
             <li class="nav__item">
@@ -40,93 +50,6 @@
               <a class="nav__link link" href="">Контакти</a>
             </li>
           </ul>
-
-          <button
-            class="menu_btn"
-            type="button"
-            aria-controls="menu-conteiner"
-            aria-expanded="false"
-            data-menu-button
-          >
-            <svg
-              class="menu_icon"
-              width="40"
-              height="40"
-              aria-label="Переключатель мобильного меню"
-            >
-              <use class="menu_icon--open" href="./images/icons.svg#menu"></use>
-              <use class="menu_icon--close" href="./images/icons.svg#close_menu_m"></use>
-            </svg>
-          </button>
-
-          <div class="menu-conteiner" data-menu id="menu-conteiner">
-            <ul class="menu__list list">
-              <li class="menu__item">
-                <a class="menu__link link" href="./index.html">Студія</a>
-              </li>
-
-              <li class="menu__item">
-                <a class="menu__link link" href="./portfolio.html">Портфоліо</a>
-              </li>
-
-              <li class="menu__item">
-                <a class="menu__link link" href="">Контакти</a>
-              </li>
-            </ul>
-
-            <ul class="menu-contacts list">
-              <li class="menu-contacts__item">
-                <a class="menu-contacts__phone link" href="tel:+380961111111">
-                  +38 096 111 11 11
-                </a>
-              </li>
-
-              <li class="menu-contacts__item">
-                <a class="menu-contacts__mail link" href="mailto:info@devstudio.com">
-                  info@devstudio.com
-                </a>
-              </li>
-            </ul>
-
-            <ul class="menu__socials-list list">
-              <li class="menu__socials-item">
-                <a
-                  href="https://www.instagram.com/"
-                  class="menu__socials-link link"
-                  rel="noopener noreferrer"
-                  aria-label="instagram"
-                  >Instagram
-                </a>
-              </li>
-              <li class="menu__socials-item">
-                <a
-                  href="https://twitter.com/"
-                  class="menu__socials-link link"
-                  rel="noopener noreferrer"
-                  aria-label="twitter"
-                  >Twitter
-                </a>
-              </li>
-              <li class="menu__socials-item">
-                <a
-                  href="https://uk-ua.facebook.com/"
-                  class="menu__socials-link link"
-                  rel="noopener noreferrer"
-                  aria-label="facebook"
-                  >Facebook
-                </a>
-              </li>
-              <li class="menu__socials-item">
-                <a
-                  href="https://www.linkedin.com/"
-                  class="menu__socials-link link"
-                  rel="noopener noreferrer"
-                  aria-label="linkedin"
-                  >Linkedin
-                </a>
-              </li>
-            </ul>
-          </div>
         </nav>
 
         <ul class="header-contacts list">
@@ -228,39 +151,52 @@
           <ul class="occupation__list list">
             <li class="occupation__item">
               <div class="occupation__thumb">
-                <img
-                  class="occupation__img"
-                  src="./images/main_page/we_doing_1.jpg"
-                  alt="Пишем код"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/occupation/img@1x_lg-1.jpg 1x,
+                      ./images/occupation/img@2x_lg-1.jpg 2x
+                    "
+                  />
+                  <img class="occupation__img src="./images/occupation/img@1x_lg-1.jpg" alt="Пишем
+                  код" />
+                </picture>
                 <p class="occupation__label">Десктопні додатки</p>
               </div>
             </li>
 
             <li class="occupation__item">
               <div class="occupation__thumb">
-                <img
-                  class="occupation__img"
-                  src="./images/main_page/we_doing_2.jpg"
-                  alt="Делаем адаптивную верстку"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/occupation/img@1x_lg-2.jpg 1x,
+                      ./images/occupation/img@2x_lg-2.jpg 2x
+                    "
+                  />
+                  <img class="occupation__img src="./images/occupation/img@1x_lg-2.jpg" alt="Делаем
+                  адаптивную верстку" />
+                </picture>
+
                 <p class="occupation__label">Мобільні додатки</p>
               </div>
             </li>
 
             <li class="occupation__item">
               <div class="occupation__thumb">
-                <img
-                  class="occupation__img"
-                  src="./images/main_page/we_doing_3.jpg"
-                  alt="Создаем дизайн"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/occupation/img@1x_lg-3.jpg 1x,
+                      ./images/occupation/img@2x_lg-3.jpg 2x
+                    "
+                  />
+                  <img class="occupation__img src="./images/occupation/img@1x_lg-3.jpg" alt="Создаем
+                  дизайн" />
+                </picture>
                 <p class="occupation__label">Дизайнерські рішення</p>
               </div>
             </li>
@@ -809,7 +745,84 @@
         </form>
       </div>
     </div>
-    <script src="./js/modal.js"></script>
+
+    <!--Mobail menu-->
+
+    <div class="menu-overlay" data-menu>
+      <div class="menu-conteiner">
+        <button class="menu-btn" type="button" data-menu-close>
+          <svg class="menu-close-icon" width="40" height="40">
+            <use class="menu_icon--close" href="./images/icons.svg#close_menu_m"></use>
+          </svg>
+        </button>
+
+        <ul class="menu__list list">
+          <li class="menu__item">
+            <a class="menu__link link" href="./index.html">Студія</a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link link" href="./portfolio.html">Портфоліо</a>
+          </li>
+
+          <li class="menu__item">
+            <a class="menu__link link" href="">Контакти</a>
+          </li>
+        </ul>
+
+        <ul class="menu-contacts list">
+          <li class="menu-contacts__item">
+            <a class="menu-contacts__phone link" href="tel:+380961111111"> +38 096 111 11 11 </a>
+          </li>
+
+          <li class="menu-contacts__item">
+            <a class="menu-contacts__mail link" href="mailto:info@devstudio.com">
+              info@devstudio.com
+            </a>
+          </li>
+        </ul>
+
+        <ul class="menu__socials-list list">
+          <li class="menu__socials-item">
+            <a
+              href="https://www.instagram.com/"
+              class="menu__socials-link link"
+              rel="noopener noreferrer"
+              aria-label="instagram"
+              >Instagram
+            </a>
+          </li>
+          <li class="menu__socials-item">
+            <a
+              href="https://twitter.com/"
+              class="menu__socials-link link"
+              rel="noopener noreferrer"
+              aria-label="twitter"
+              >Twitter
+            </a>
+          </li>
+          <li class="menu__socials-item">
+            <a
+              href="https://uk-ua.facebook.com/"
+              class="menu__socials-link link"
+              rel="noopener noreferrer"
+              aria-label="facebook"
+              >Facebook
+            </a>
+          </li>
+          <li class="menu__socials-item">
+            <a
+              href="https://www.linkedin.com/"
+              class="menu__socials-link link"
+              rel="noopener noreferrer"
+              aria-label="linkedin"
+              >Linkedin
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <script src="./js/menu-modal.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

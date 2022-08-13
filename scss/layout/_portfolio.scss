@@ -1,3 +1,7 @@
+.portfolio {
+  @include section;
+}
+
 .portfolio-title {
   font-weight: 700;
   font-size: 18px;
@@ -16,25 +20,38 @@
 }
 
 .portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .portfolio-item {
-  @include flex-basis(30, 3);
   transition: box-shadow var(--anim-hover);
+  max-width: 450px;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &:hover,
   &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
-}
 
-.portfolio-img {
-  display: block;
-  margin-bottom: -2px;
+  @media screen and (min-width: 768px) {
+    @include flex-basis(30, 2);
+    max-width: 354px;
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include flex-basis(30, 3);
+    max-width: 370px;
+  }
 }
 
 .portfolio-overlay {
@@ -49,8 +66,13 @@
   width: 100%;
   background-color: rgba(33, 150, 243, 0.9);
 
-  transform: translateY(100%);
+  transform: translateY(112%);
   transition: transform 500ms ease-in;
+}
+
+.portfolio-img {
+  width: 100%;
+  height: 294px;
 }
 
 .portfolio-link:hover .overlay {
