@@ -7,6 +7,9 @@
   display: flex;
   align-items: center;
   position: relative;
+  @media screen and (max-width: 767px) {
+    padding: 16px 15px;
+  }
 }
 
 .header-contacts {
@@ -27,6 +30,7 @@
 
 .header-contacts__item {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
 }
 
@@ -49,9 +53,10 @@
   }
 }
 
-.header-contacts__item {
-  display: flex;
-  flex-wrap: nowrap;
+.header-contacts__mail {
+  @media screen and (min-width: 1200px) {
+    margin-right: 30px;
+  }
 }
 
 .header-contacts__mail:hover,
